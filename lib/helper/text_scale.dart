@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-class ScaleSize {
+class TextScale {
   static double textScaleFactor(BuildContext context,
       {double maxTextScaleFactor = 4}) {
     final width = MediaQuery.of(context).size.width;

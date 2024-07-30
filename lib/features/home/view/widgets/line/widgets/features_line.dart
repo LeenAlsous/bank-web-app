@@ -30,11 +30,11 @@ class FeaturesLineWidget extends StatelessWidget {
             shape: BoxShape.circle,
           ),
         ),),
-        afterLineStyle: line(),
-        beforeLineStyle: line());
+        afterLineStyle: _line(),
+        beforeLineStyle: _line());
   }
 
-  LineStyle line(){
+  LineStyle _line(){
     return const LineStyle(thickness: 1, color: Color(0xFF9E9FA3));
   }
 }
