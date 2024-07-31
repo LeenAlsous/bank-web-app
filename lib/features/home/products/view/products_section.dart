@@ -19,7 +19,7 @@ class ProductsSection extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
               for(var index = 0; index < length; ++index)
-                ProductContainer(product: controller.products[index])
+                ProductContainer(controller: controller, index: index)
             ],),
             ProductDetails(product: controller.products[controller.currentId - 1]),
           ],

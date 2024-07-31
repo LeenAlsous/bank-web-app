@@ -36,8 +36,8 @@ class FaqSection extends StatelessWidget {
                             categoryIndex < categoriesLength;
                             ++categoryIndex)
                           CategoryContainer(
-                              categoryModel:
-                                  controller.categories[categoryIndex])
+                              controller:
+                                  controller, index: categoryIndex,)
                       ],
                     ),
                   ),
@@ -45,9 +45,7 @@ class FaqSection extends StatelessWidget {
                     children: [
                       for (int index = 0; index < questionsLength; ++index)
                         QuestionAnswerContainer(
-                            qA: controller
-                                .categories[controller.currentCategory]
-                                .qAndA[index])
+                            controller: controller, index: index,)
                     ],
                   ),
                 ],

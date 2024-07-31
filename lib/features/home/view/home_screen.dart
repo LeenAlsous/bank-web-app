@@ -1,7 +1,8 @@
 import 'package:bank_web_app/features/home/faq/view/faq_section.dart';
-import 'package:bank_web_app/features/home/impact/view/impact_section.dart';
+import 'package:bank_web_app/features/home/how_it_works/view/how_it_works_web.dart';
 import 'package:bank_web_app/features/home/products/view/products_section.dart';
 import 'package:bank_web_app/features/home/qualifications/view/qualification_section.dart';
+import 'package:bank_web_app/features/home/reviews/view/reviews_section.dart';
 import 'package:bank_web_app/features/home/stories/view/stories_section.dart';
 import 'package:bank_web_app/features/home/view/widgets/awards.dart';
 import 'package:bank_web_app/features/home/view/widgets/line/line.dart';
@@ -22,7 +23,7 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: const Color(0xFFF6F8FB),
       body: ListView(
         children: [
-          // todo: move the header section to a custom widget
+          // todo: move the header section to its own directory
           Container(
             decoration: const BoxDecoration(
                 color: Color(0xFF161727),
@@ -84,11 +85,12 @@ class HomeScreen extends StatelessWidget {
           const Text('Our offerings are tailored to meet the unique needs and challenges of each business, and are designed to provide the funding and support necessary to help businesses reach their full potential.', textAlign: TextAlign.center, style: TextStyle(color: Color(0xFF2B4157)),),
           const ProductsSection(),
           // const Features(), needs another solution
-          const ImpactSection(),
+          const ReviewsSection(),
           const AwardsSection(),
           const StoriesSection(),
           const QualificationSection(),
-          const FaqSection()
+          const FaqSection(),
+          const HowItWorksWeb()
         ],
       ),
     );

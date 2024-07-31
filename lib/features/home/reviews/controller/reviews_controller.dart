@@ -1,4 +1,4 @@
-import 'package:bank_web_app/features/home/impact/model/review_model.dart';
+import 'package:bank_web_app/features/home/reviews/model/review_model.dart';
 import 'package:get/get.dart';
 
 class ReviewsController extends GetxController {

@@ -1,9 +1,9 @@
-import 'package:bank_web_app/features/home/impact/view/widgets/impact_header.dart';
-import 'package:bank_web_app/features/home/impact/view/widgets/reviews.dart';
+import 'package:bank_web_app/features/home/reviews/view/widgets/reviews.dart';
+import 'package:bank_web_app/features/home/reviews/view/widgets/reviews_header.dart';
 import 'package:flutter/material.dart';
 
-class ImpactSection extends StatelessWidget {
-  const ImpactSection({Key? key}) : super(key: key);
+class ReviewsSection extends StatelessWidget {
+  const ReviewsSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class ImpactSection extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const ImpactHeader(),
+          const ReviewsHeader(),
           SizedBox(height: MediaQuery.sizeOf(context).height * 0.02),
           const Reviews()
         ],

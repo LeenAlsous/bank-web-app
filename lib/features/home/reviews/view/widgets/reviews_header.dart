@@ -1,10 +1,10 @@
-import 'package:bank_web_app/features/home/impact/view/widgets/trustpilot.dart';
+import 'package:bank_web_app/features/home/reviews/view/widgets/trustpilot.dart';
 import 'package:bank_web_app/helper/screen_sizes.dart';
 import 'package:bank_web_app/helper/text_scale.dart';
 import 'package:flutter/material.dart';
 
-class ImpactHeader extends StatelessWidget {
-  const ImpactHeader({Key? key}) : super(key: key);
+class ReviewsHeader extends StatelessWidget {
+  const ReviewsHeader({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

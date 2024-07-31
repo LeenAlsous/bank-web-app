@@ -1,6 +1,5 @@
-import 'package:bank_web_app/features/home/impact/controller/reviews_controller.dart';
-import 'package:bank_web_app/features/home/impact/view/widgets/impact_header.dart';
-import 'package:bank_web_app/features/home/impact/view/widgets/reviews_container.dart';
+import 'package:bank_web_app/features/home/reviews/controller/reviews_controller.dart';
+import 'package:bank_web_app/features/home/reviews/view/widgets/reviews_container.dart';
 import 'package:bank_web_app/helper/screen_sizes.dart';
 import 'package:bank_web_app/widgets/secondary_button.dart';
 import 'package:flutter/material.dart';
