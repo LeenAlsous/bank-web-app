@@ -10,7 +10,7 @@ class ReviewsSection extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.all(MediaQuery.sizeOf(context).height * 0.03),
       child: Column(
-        mainAxisSize: MainAxisSize.min,
+        //mainAxisSize: MainAxisSize.min,
         children: [
           const ReviewsHeader(),
           SizedBox(height: MediaQuery.sizeOf(context).height * 0.02),

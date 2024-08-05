@@ -24,7 +24,7 @@ class ReviewsHeader extends StatelessWidget {
                 const Text('Empowering communities'),
                 Text(
                   'Our positive social impact',
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontWeight: FontWeight.bold),
                   textScaler: TextScaler.linear(TextScale.textScaleFactor(
                       context,
                       maxTextScaleFactor: 3)),
@@ -45,9 +45,7 @@ class ReviewsHeader extends StatelessWidget {
               direction: !isMobile ? Axis.vertical : Axis.horizontal,
               mainAxisAlignment: isMobile ? MainAxisAlignment.center : MainAxisAlignment.start,
               children: [
-                const Flexible(
-                  child: Trustpilot()
-                ),
+                const Trustpilot(),
                 Flex(
                   direction: !isMobile ? Axis.horizontal : Axis.vertical,
                   children: [

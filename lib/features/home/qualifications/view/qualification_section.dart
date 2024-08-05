@@ -1,6 +1,5 @@
 import 'package:bank_web_app/features/home/qualifications/controller/qualifications_controller.dart';
 import 'package:bank_web_app/features/home/qualifications/view/widgets/qualification_container.dart';
-import 'package:bank_web_app/helper/screen_sizes.dart';
 import 'package:bank_web_app/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +8,7 @@ class QualificationSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isMobile = ScreenSizes.isMobile(context);
+    //bool isMobile = ScreenSizes.isMobile(context);
     int length = QualificationsController.qualifications.length;
     List<String> qualifications = QualificationsController.qualifications;
     return Container(

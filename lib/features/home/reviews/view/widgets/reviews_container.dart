@@ -12,7 +12,7 @@ class ReviewsContainer extends StatelessWidget {
     bool isDesktop = ScreenSizes.isDesktop(context);
     return Container(
       width: isMobile ? MediaQuery.sizeOf(context).width / 1.25 : MediaQuery.sizeOf(context).width / 3,
-      height: MediaQuery.sizeOf(context).height * 0.45,
+      //height: MediaQuery.sizeOf(context).height * 0.45,
       margin: const EdgeInsets.only(right: 10),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -21,6 +21,7 @@ class ReviewsContainer extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -32,29 +33,32 @@ class ReviewsContainer extends StatelessWidget {
               Text('rating')
             ],),
             Text(reviewModel.title, style: const TextStyle(fontWeight: FontWeight.bold),),
-            Text(reviewModel.description, style: const TextStyle(color: Color(0xFF2B4157))),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Image.asset(reviewModel.image, width: MediaQuery.sizeOf(context).height * 0.1, height: MediaQuery.sizeOf(context).height * 0.1),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(reviewModel.name, style: const TextStyle(fontWeight: FontWeight.bold),),
-                        Text(reviewModel.job)
-                      ],
-                    ),
-                  ],
-                ),
-                if (isDesktop) const Row(
-                  children: [
-                  Icon(Icons.star, color: Colors.amber,),
-                  Text('5.0 ', style: TextStyle(fontWeight: FontWeight.bold),),
-                  Text('rating')
-                ],)
-              ],
+            Flexible(child: Text(reviewModel.description, style: const TextStyle(color: Color(0xFF2B4157)))),
+            Flexible(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      Image.asset(reviewModel.image, width: MediaQuery.sizeOf(context).height * 0.1, height: MediaQuery.sizeOf(context).height * 0.1),
+                      Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(reviewModel.name, style: const TextStyle(fontWeight: FontWeight.bold),),
+                          Text(reviewModel.job)
+                        ],
+                      ),
+                    ],
+                  ),
+                  if (isDesktop) const Row(
+                    children: [
+                    Icon(Icons.star, color: Colors.amber,),
+                    Text('5.0 ', style: TextStyle(fontWeight: FontWeight.bold),),
+                    Text('rating')
+                  ],)
+                ],
+              ),
             )
           ],
         ),

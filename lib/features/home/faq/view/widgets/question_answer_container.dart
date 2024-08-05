@@ -21,7 +21,7 @@ class QuestionAnswerContainer extends StatelessWidget {
             },
             child: Container(
               margin: EdgeInsets.all(MediaQuery.sizeOf(context).height * 0.01),
-              width: !isMobile ? MediaQuery.sizeOf(context).width / 3 : null,
+              width: !isMobile ? MediaQuery.sizeOf(context).width / 2.5 : null,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: qAndA.isSelected

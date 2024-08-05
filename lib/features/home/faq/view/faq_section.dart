@@ -12,7 +12,6 @@ class FaqSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisSize: MainAxisSize.min,
       children: [
         Text(
           'Frequently asked questions',
@@ -26,7 +25,6 @@ class FaqSection extends StatelessWidget {
               int questionsLength = controller
                   .categories[controller.currentCategory].qAndA.length;
               return Column(
-                mainAxisSize: MainAxisSize.min,
                 children: [
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,

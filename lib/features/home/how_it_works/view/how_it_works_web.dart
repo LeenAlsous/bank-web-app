@@ -10,7 +10,6 @@ class HowItWorksWeb extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisSize: MainAxisSize.min,
       //crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -28,11 +27,10 @@ class HowItWorksWeb extends StatelessWidget {
                 Flexible(
                   flex: 2,
                   child: Column(
-                    mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: controller.stepsModel
                         .map((step) =>
-                            StepIndex(step: step, controller: controller))
+                            StepIndex(number: step.stepNo, controller: controller))
                         .toList(),
                   ),
                 )

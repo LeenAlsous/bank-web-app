@@ -9,7 +9,7 @@ class AwardsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     bool isMobile = ScreenSizes.isMobile(context);
     return Container(
-      margin: const EdgeInsets.all(10),
+      margin: const EdgeInsets.all(20),
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: const Color(0xFF161727)),
       child: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -17,7 +17,7 @@ class AwardsSection extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           direction: isMobile ? Axis.vertical : Axis.horizontal,
           children: [
-            Text('Awards \n& recognition', style: TextStyle(color: Colors.white), textScaler: TextScaler.linear(TextScale.textScaleFactor(context, maxTextScaleFactor: 2)),),
+            Text('Awards \n& recognition', style: const TextStyle(color: Colors.white), textScaler: TextScaler.linear(TextScale.textScaleFactor(context, maxTextScaleFactor: 2)),),
             Flexible(
               child: Row(
                 children: [

@@ -4,12 +4,13 @@ import 'package:bank_web_app/features/home/how_it_works/model/step_model.dart';
 import'package:flutter/material.dart';
 
 class StepIndex extends StatelessWidget {
-  final StepModel step;
+  final int number;
   final StepsController controller;
-  const StepIndex({Key? key, required this.step, required this.controller}) : super(key: key);
+  const StepIndex({Key? key, required this.controller, required this.number}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    StepModel step = controller.stepsModel[number - 1];
     return InkWell(
       onTap: (){
         controller.changeStep(step.stepNo);

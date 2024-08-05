@@ -1,9 +1,13 @@
+import 'package:bank_web_app/features/footer/view/footer.dart';
+import 'package:bank_web_app/features/home/cta/view/cta_section.dart';
 import 'package:bank_web_app/features/home/faq/view/faq_section.dart';
-import 'package:bank_web_app/features/home/how_it_works/view/how_it_works_web.dart';
+import 'package:bank_web_app/features/home/how_it_works/view/how_it_works_section.dart';
+import 'package:bank_web_app/features/home/marketplace/view/marketplace_section.dart';
 import 'package:bank_web_app/features/home/products/view/products_section.dart';
 import 'package:bank_web_app/features/home/qualifications/view/qualification_section.dart';
 import 'package:bank_web_app/features/home/reviews/view/reviews_section.dart';
 import 'package:bank_web_app/features/home/stories/view/stories_section.dart';
+import 'package:bank_web_app/features/home/tools/view/tools_section.dart';
 import 'package:bank_web_app/features/home/view/widgets/awards.dart';
 import 'package:bank_web_app/features/home/view/widgets/line/line.dart';
 import 'package:bank_web_app/helper/screen_sizes.dart';
@@ -22,6 +26,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFF6F8FB),
       body: ListView(
+        //shrinkWrap: true,
         children: [
           // todo: move the header section to its own directory
           Container(
@@ -90,7 +95,11 @@ class HomeScreen extends StatelessWidget {
           const StoriesSection(),
           const QualificationSection(),
           const FaqSection(),
-          const HowItWorksWeb()
+          const HowItWorksSection(),
+          const ToolsSection(),
+          const MarketplaceSection(),
+          const CtaSection(),
+          const Footer()
         ],
       ),
     );
